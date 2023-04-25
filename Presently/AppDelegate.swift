@@ -9,12 +9,15 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+    let defaults = UserDefaults.standard
     let statusItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.variableLength)
     var timer = Timer()
     var count = 0
     var windowController: NSWindowController?
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        defaults.synchronize()
+        print(defaults.string(forKey: "APIKey") ?? "None")
         if let button = statusItem.button {
             button.title = "00:00:00"
             button.action = #selector(showMenu(_:))
@@ -38,7 +41,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let title = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
         statusItem.button?.title = title
     }
-    
+
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
