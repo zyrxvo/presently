@@ -8,18 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		9853B49429F8495000108824 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9853B49329F8495000108824 /* AppDelegate.swift */; };
-		9853B49629F8495000108824 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9853B49529F8495000108824 /* ViewController.swift */; };
 		9853B49829F8495100108824 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9853B49729F8495100108824 /* Assets.xcassets */; };
-		9853B49B29F8495100108824 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9853B49929F8495100108824 /* Main.storyboard */; };
+		9853B4A829F8524800108824 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9853B4A729F8524800108824 /* Main.storyboard */; };
+		9853B4AA29F8533100108824 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9853B4A929F8533100108824 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9853B49029F8495000108824 /* Presently.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Presently.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9853B49329F8495000108824 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9853B49529F8495000108824 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9853B49729F8495100108824 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9853B49A29F8495100108824 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9853B49C29F8495100108824 /* Presently.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Presently.entitlements; sourceTree = "<group>"; };
+		9853B4A229F84A7700108824 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9853B4A729F8524800108824 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9853B4A929F8533100108824 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +53,12 @@
 		9853B49229F8495000108824 /* Presently */ = {
 			isa = PBXGroup;
 			children = (
+				9853B4A229F84A7700108824 /* Info.plist */,
 				9853B49329F8495000108824 /* AppDelegate.swift */,
-				9853B49529F8495000108824 /* ViewController.swift */,
 				9853B49729F8495100108824 /* Assets.xcassets */,
-				9853B49929F8495100108824 /* Main.storyboard */,
 				9853B49C29F8495100108824 /* Presently.entitlements */,
+				9853B4A729F8524800108824 /* Main.storyboard */,
+				9853B4A929F8533100108824 /* ViewController.swift */,
 			);
 			path = Presently;
 			sourceTree = "<group>";
@@ -120,7 +122,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9853B49829F8495100108824 /* Assets.xcassets in Resources */,
-				9853B49B29F8495100108824 /* Main.storyboard in Resources */,
+				9853B4A829F8524800108824 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,23 +133,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9853B49629F8495000108824 /* ViewController.swift in Sources */,
+				9853B4AA29F8533100108824 /* ViewController.swift in Sources */,
 				9853B49429F8495000108824 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		9853B49929F8495100108824 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9853B49A29F8495100108824 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9853B49D29F8495100108824 /* Debug */ = {
@@ -269,13 +260,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Presently/Presently.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 498B9A9XG7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_FILE = Presently/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = NO;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Garett Brown";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -296,13 +291,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Presently/Presently.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 498B9A9XG7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_FILE = Presently/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = NO;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Garett Brown";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
