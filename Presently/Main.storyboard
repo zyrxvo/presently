@@ -45,6 +45,44 @@
                                     </items>
                                 </menu>
                             </menuItem>
+                            <menuItem title="Edit" id="xf9-O1-rAY">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Edit" id="yHR-YW-b4A">
+                                    <items>
+                                        <menuItem title="Undo" keyEquivalent="z" id="QFV-Xp-Dv7">
+                                            <connections>
+                                                <action selector="undo:" target="Ady-hI-5gd" id="hzR-aS-zzW"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Redo" keyEquivalent="Z" id="Qcv-4H-mwC">
+                                            <connections>
+                                                <action selector="redo:" target="Ady-hI-5gd" id="AvC-Ya-12A"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="FHQ-Gv-CBF"/>
+                                        <menuItem title="Cut" keyEquivalent="x" id="yWM-22-MbY">
+                                            <connections>
+                                                <action selector="cut:" target="Ady-hI-5gd" id="RUq-kJ-kLz"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Copy" keyEquivalent="c" id="4H0-5I-YT0">
+                                            <connections>
+                                                <action selector="copy:" target="Ady-hI-5gd" id="Ha3-vz-iMc"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Paste" keyEquivalent="v" id="AnV-SM-sLz">
+                                            <connections>
+                                                <action selector="pasteAsPlainText:" target="Ady-hI-5gd" id="gSY-qb-HNe"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Select All" keyEquivalent="a" id="wg5-ui-IRf">
+                                            <connections>
+                                                <action selector="selectAll:" target="Ady-hI-5gd" id="L0e-Lz-S1e"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
                         </items>
                     </menu>
                     <connections>
@@ -87,7 +125,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="is7-GV-Vgy">
-                                <rect key="frame" x="126" y="68" width="229" height="21"/>
+                                <rect key="frame" x="61" y="68" width="357" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" drawsBackground="YES" usesSingleLineMode="YES" id="gOO-ly-4fj">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -98,26 +136,17 @@
                                     <action selector="endEditing:" target="XfG-lQ-9wD" id="NBG-DX-2uP"/>
                                 </connections>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BNi-3f-XmL">
-                                <rect key="frame" x="195" y="91" width="92" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Toggl API Key" id="kP3-AP-gHf">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="AccentColor"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lPN-Uj-nf3">
                                 <rect key="frame" x="147" y="139" width="186" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" borderStyle="bezel" alignment="center" title="Presently" drawsBackground="YES" id="DGu-Ma-DMB">
-                                    <font key="font" metaFont="system" size="36"/>
+                                <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" alignment="center" title="Presently" id="DGu-Ma-DMB">
+                                    <font key="font" size="36" name="SFProRounded-Bold"/>
                                     <color key="textColor" name="AccentColor"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jRk-Gd-Fs0">
-                                <rect key="frame" x="179" y="29" width="118" height="22"/>
+                                <rect key="frame" x="180" y="29" width="118" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Hide Dock Icon" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Wfl-Wf-azH">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -127,6 +156,15 @@
                                     <action selector="hideDockIcon:" target="XfG-lQ-9wD" id="9T8-EQ-hqw"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BNi-3f-XmL">
+                                <rect key="frame" x="194" y="97" width="92" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Toggl API Key" id="kP3-AP-gHf">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="AccentColor"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
