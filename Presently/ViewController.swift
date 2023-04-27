@@ -9,6 +9,7 @@ import Cocoa
 
 class ViewController: NSViewController {
     let defaults = UserDefaults.standard
+    let appDelegate = NSApplication.shared.delegate as! AppDelegate
 
     @IBOutlet var apiField: NSTextField!
     override func viewDidLoad() {
@@ -16,7 +17,6 @@ class ViewController: NSViewController {
         apiField.bezelStyle = .roundedBezel
         defaults.synchronize()
         apiField.stringValue = defaults.string(forKey: "APIKey") ?? "None"
-        // Do any additional setup after loading the view.
     }
 
     override var representedObject: Any? {
@@ -28,9 +28,6 @@ class ViewController: NSViewController {
     @IBAction func endEditing(_ sender: NSTextField) {
         defaults.set(sender.stringValue, forKey: "APIKey")
         defaults.synchronize()
-    }
-    
-    @IBAction func hideDockIcon(_ sender: NSButton) {
     }
 }
 

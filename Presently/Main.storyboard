@@ -16,8 +16,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Presently" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About Presently" id="5kV-Vb-QxS">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        <menuItem title="About Presently" keyEquivalent="." id="5kV-Vb-QxS">
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
                                             </connections>
@@ -25,6 +24,11 @@
                                         <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
                                             <connections>
                                                 <segue destination="B8D-0N-5wS" kind="show" id="sS7-8Q-yms"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Refresh" keyEquivalent="r" id="F2G-IG-fKX">
+                                            <connections>
+                                                <action selector="refreshKey:" target="Voe-Tx-rLC" id="0wY-BY-h1n"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="Close" keyEquivalent="w" id="TFo-vr-5cr">
@@ -121,11 +125,11 @@
             <objects>
                 <viewController identifier="ViewController" storyboardIdentifier="ViewController" showSeguePresentationStyle="single" id="XfG-lQ-9wD" customClass="ViewController" customModule="Presently" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="214"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="187"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="is7-GV-Vgy">
-                                <rect key="frame" x="61" y="68" width="357" height="21"/>
+                                <rect key="frame" x="61" y="41" width="357" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" drawsBackground="YES" usesSingleLineMode="YES" id="gOO-ly-4fj">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -137,7 +141,7 @@
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lPN-Uj-nf3">
-                                <rect key="frame" x="147" y="139" width="186" height="48"/>
+                                <rect key="frame" x="147" y="112" width="186" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" alignment="center" title="Presently" id="DGu-Ma-DMB">
                                     <font key="font" size="36" name="SFProRounded-Bold"/>
@@ -145,19 +149,8 @@
                                     <color key="backgroundColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jRk-Gd-Fs0">
-                                <rect key="frame" x="180" y="29" width="118" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="Hide Dock Icon" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Wfl-Wf-azH">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="hideDockIcon:" target="XfG-lQ-9wD" id="9T8-EQ-hqw"/>
-                                </connections>
-                            </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BNi-3f-XmL">
-                                <rect key="frame" x="194" y="97" width="92" height="16"/>
+                                <rect key="frame" x="194" y="70" width="92" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Toggl API Key" id="kP3-AP-gHf">
                                     <font key="font" metaFont="system"/>
@@ -173,7 +166,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-126" y="696"/>
+            <point key="canvasLocation" x="-126" y="682.5"/>
         </scene>
     </scenes>
     <resources>
