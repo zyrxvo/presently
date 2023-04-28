@@ -21,6 +21,7 @@
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="SRM-Bf-zLa"/>
                                         <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
                                             <connections>
                                                 <segue destination="B8D-0N-5wS" kind="show" id="sS7-8Q-yms"/>
@@ -29,6 +30,11 @@
                                         <menuItem title="Refresh" keyEquivalent="r" id="F2G-IG-fKX">
                                             <connections>
                                                 <action selector="refreshKey:" target="Voe-Tx-rLC" id="0wY-BY-h1n"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Hide Dock Icon" keyEquivalent="d" id="RCm-Fk-QRB">
+                                            <connections>
+                                                <action selector="hideDockIcon:" target="Voe-Tx-rLC" id="5dW-9n-Njw"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="Close" keyEquivalent="w" id="TFo-vr-5cr">
@@ -41,6 +47,7 @@
                                                 <action selector="hide:" target="Ady-hI-5gd" id="YSA-eu-7Ji"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="izG-Ad-Ddg"/>
                                         <menuItem title="Quit Presently" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
@@ -102,7 +109,7 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController storyboardIdentifier="Presently" showSeguePresentationStyle="single" id="B8D-0N-5wS" sceneMemberID="viewController">
+                <windowController storyboardIdentifier="Presently" showSeguePresentationStyle="single" id="B8D-0N-5wS" customClass="MyWindowController" customModule="Presently" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Presently" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>

@@ -12,6 +12,8 @@
 		9853B49829F8495100108824 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9853B49729F8495100108824 /* Assets.xcassets */; };
 		9853B4A829F8524800108824 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9853B4A729F8524800108824 /* Main.storyboard */; };
 		9853B4AA29F8533100108824 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9853B4A929F8533100108824 /* ViewController.swift */; };
+		98F5841029FB1BF100D592EC /* MyWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F5840E29FB1BF100D592EC /* MyWindowController.swift */; };
+		98F5841129FB1BF100D592EC /* MyWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98F5840F29FB1BF100D592EC /* MyWindowController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		9853B4A729F8524800108824 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9853B4A929F8533100108824 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9853B4AB29F85D4900108824 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98F5840E29FB1BF100D592EC /* MyWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWindowController.swift; sourceTree = "<group>"; };
+		98F5840F29FB1BF100D592EC /* MyWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 		9853B49229F8495000108824 /* Presently */ = {
 			isa = PBXGroup;
 			children = (
+				98F5840E29FB1BF100D592EC /* MyWindowController.swift */,
+				98F5840F29FB1BF100D592EC /* MyWindowController.xib */,
 				9853B49329F8495000108824 /* AppDelegate.swift */,
 				9853B49729F8495100108824 /* Assets.xcassets */,
 				9853B49C29F8495100108824 /* Presently.entitlements */,
@@ -124,6 +130,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98F5841129FB1BF100D592EC /* MyWindowController.xib in Resources */,
 				9853B49829F8495100108824 /* Assets.xcassets in Resources */,
 				9853B4A829F8524800108824 /* Main.storyboard in Resources */,
 			);
@@ -136,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98F5841029FB1BF100D592EC /* MyWindowController.swift in Sources */,
 				9853B4AA29F8533100108824 /* ViewController.swift in Sources */,
 				98351E7629F96ACB00B9C6A0 /* Caller.swift in Sources */,
 				9853B49429F8495000108824 /* AppDelegate.swift in Sources */,

@@ -41,15 +41,13 @@ func fetch(url: URL, request: URLRequest) async throws -> Data {
     do {
         let (data, response) = try await session.data(for: request)
         guard let httpResponse = response as? HTTPURLResponse, (200..<300).contains(httpResponse.statusCode) else {
-            print("Error: Non-200 status code returned")
-            return Data()
+            throw NSError(domain: "Error: Non-200 status code returned", code: 0, userInfo: nil)
         }
         // process data
         return data
     } catch {
-        print("Error: \(error)")
+        throw NSError(domain: "Error: \(error.localizedDescription)", code: 0, userInfo: nil)
     }
-    return Data()
 }
 
 func query() async throws -> (String, Int) {
@@ -86,11 +84,9 @@ func query() async throws -> (String, Int) {
                 throw NSError(domain: "Invalid JSON format", code: 0, userInfo: nil)
             }
         } catch let error as NSError {
-            print("Error: \(error.localizedDescription)")
+            throw NSError(domain: "Error: \(error.localizedDescription)", code: 0, userInfo: nil)
         }
     } catch {
-        // handle error
+        throw NSError(domain: "Error: \(error.localizedDescription)", code: 0, userInfo: nil)
     }
-    
-    return ("Failed", 0)
 }

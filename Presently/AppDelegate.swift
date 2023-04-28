@@ -39,6 +39,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
+    @IBAction func hideDockIcon(_ sender: Any) {
+        toggleDockIcon()
+    }
     
     @objc func toggleDockIcon() {
         self.defaults.synchronize()
@@ -58,7 +61,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc func showMenu(_ sender: Any?) {
-        print(self.dockIconMenuItem.title)
         let menu = NSMenu()
         menu.addItem(NSMenuItem(title: "Refresh", action: #selector(self.refresh), keyEquivalent: "r"))
         menu.addItem(self.dockIconMenuItem)
@@ -81,8 +83,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc func update() async -> Int {
-        print("Called Update \(self.counter)")
-        self.counter += 1
         var interval = 0
         do {
             let result = try await query()
@@ -93,9 +93,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
             interval = result.1
         } catch {
-            print("Error")
+            print("Error: \(error.localizedDescription)")
         }
-        print("Interval \(interval)")
         return interval
     }
     
@@ -117,7 +116,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         do {
             try await Task.sleep(nanoseconds: UInt64(timeInterval * Double(NSEC_PER_SEC)))
         } catch {
-            print("Error?")
+            print("Error: \(error.localizedDescription)")
         }
     }
 
